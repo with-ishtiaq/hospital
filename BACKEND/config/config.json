@@ -1,0 +1,28 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "centralized_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "migrationStorageTableName": "sequelize_meta"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "centralized_db_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
